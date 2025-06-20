@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drilling & Well Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+  <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="footer.css">
+ <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+
+ 
+<nav class="navbar navbar-expand-lg shadow-sm py-2 bg-white">
+  <div class="container-fluid px-2 px-md-4 align-items-center position-relative">
+    <!-- Logo -->
+    <a class="navbar-brand nav-logo me-1" href="#">
+      <img src="navbar.png" alt="Nimbus Logo" class="nav-logo-img" />
+    </a>
+    <!-- MOBILE ONLY: Search bar, search icon, hamburger -->
+    <div class="d-lg-none d-flex align-items-center flex-grow-1">
+      <form class="mobile-search flex-grow-1 me-1" role="search" style="max-width: 220px;">
+  <div class="input-group">
+    <span class="input-group-text" id="search-icon"
+      style="background:#f5f5f5; border:1.5px solid #A31610; border-right:0; border-radius:999px 0 0 999px;">
+      <i class="bi bi-search" style="color:#A31610;"></i>
+    </span>
+    <input 
+      type="search" 
+      class="form-control mobile-search-input" 
+      placeholder="Search" 
+      aria-label="Search" 
+      aria-describedby="search-icon"
+      style="background:#f5f5f5; border:1.5px solid #A31610; border-radius:0 999px 999px 0;"
+    />
+  </div>
+</form>
+      <button class="navbar-toggler ms-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <!-- Menu: collapse on mobile -->
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Jobs</a>
+        </li>
+        <!-- MEGA DROPDOWN (example for Professionals) -->
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">For Professionals</a>
+          <div class="dropdown-menu mega-dropdown py-3 px-4" style="width: 500px;">
+            <div class="row">
+              <div class="col-6">
+                <h6 class="dropdown-header">Find Opportunities</h6>
+                <a class="dropdown-item" href="#">All Jobs</a>
+                <a class="dropdown-item" href="#">Contract Work</a>
+                <a class="dropdown-item" href="#">Permanent Roles</a>
+              </div>
+              <div class="col-6">
+                <h6 class="dropdown-header">Career Resources</h6>
+                <a class="dropdown-item" href="#">CV Help</a>
+                <a class="dropdown-item" href="#">Interview Tips</a>
+                <a class="dropdown-item" href="#">Industry News</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- MEGA DROPDOWN (example for Clients) -->
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">For Clients</a>
+          <div class="dropdown-menu mega-dropdown py-3 px-4" style="width: 500px;">
+            <div class="row">
+              <div class="col-6">
+                <h6 class="dropdown-header">Hire Talent</h6>
+                <a class="dropdown-item" href="#">Temporary Staffing</a>
+                <a class="dropdown-item" href="#">Permanent Recruitment</a>
+              </div>
+              <div class="col-6">
+                <h6 class="dropdown-header">Client Resources</h6>
+                <a class="dropdown-item" href="#">Our Process</a>
+                <a class="dropdown-item" href="#">Compliance</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- MEGA DROPDOWN (example for About) -->
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About</a>
+          <div class="dropdown-menu mega-dropdown py-3 px-4" style="width: 400px;">
+            <div class="row">
+              <div class="col-6">
+                <h6 class="dropdown-header">Company</h6>
+                <a class="dropdown-item" href="#">Our Story</a>
+                <a class="dropdown-item" href="#">Leadership</a>
+              </div>
+              <div class="col-6">
+                <h6 class="dropdown-header">Get in Touch</h6>
+                <a class="dropdown-item" href="#">Contact</a>
+                <a class="dropdown-item" href="#">Careers</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+      </ul>
+      <!-- Right icons (desktop only) -->
+      <div class="d-none d-lg-flex align-items-center gap-3">
+        <a href="#" class="nav-icon"><i class="bi bi-search"></i></a>
+        <a href="#" class="nav-icon"><i class="bi bi-person"></i></a>
+        <a href="#" class="nav-icon"><i class="bi bi-heart"></i></a>
+        <a href="#" class="nav-icon"><i class="bi bi-bell"></i></a>
+      </div>
+    </div>
+    <!-- MOBILE: vertical icon stack, hidden by default -->
+    <div class="mobile-icons-vertical d-lg-none position-absolute end-0" style="top:60px; right:8px;">
+      <a href="#" class="nav-icon d-block mb-2"><i class="bi bi-person"></i></a>
+      <a href="#" class="nav-icon d-block mb-2"><i class="bi bi-heart"></i></a>
+      <a href="#" class="nav-icon d-block"><i class="bi bi-bell"></i></a>
+    </div>
+  </div>
+</nav>
+
+     <!-- Username  -->
+
+<section style="background-color: #f8f9fa;">
+  <div class="container py-5">
+    <div class="card profile-card p-4 mx-auto" style="max-width: 900px;">
+      <div class="row g-4 align-items-center">
+        
+        <!-- Profile Photo -->
+        <div class="col-md-3 text-center">
+          <div class="photo-placeholder mx-auto">
+            <i class="bi bi-image"></i>
+            <span>Add Photo</span>
+          </div>
+        </div>
+
+        <!-- User Info -->
+        <div class="col-md-9">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h5 class="section-title  fw-bold mb-0">Username <i class="bi bi-pencil ms-1"></i></h5>
+              <div class="text-muted">Diploma</div>
+              <div class="fw-light">Harvard Business School, US</div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <!-- Country, Phone, Email -->
+          <div class="row g-3">
+            <div class="col-md-4 d-flex align-items-center">
+              <img src="dashboard1.png" alt="AU Flag" width="28" class="me-2" />
+              <span>AU</span>
+            </div>
+            <div class="col-md-4 d-flex align-items-center">
+              <i class="bi bi-telephone info-icon"></i>
+              <span>+911234567890</span>
+            </div>
+            <div class="col-md-4 d-flex align-items-center">
+              <i class="bi bi-envelope info-icon"></i>
+              <span>Userper@Gmail.Com</span>
+            </div>
+          </div>
+
+          <!-- Gender Row -->
+          <div class="row mt-3">
+            <div class="col-md-4 d-flex align-items-center">
+              <i class="bi bi-gender-male info-icon"></i>
+              <span>Male</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- View Edit -->
+<section style="background-color: #f8f9fa;">
+  <div class="container py-3">
+    <div class="bg-white text-start py-2" style="padding-left: 80px;">
+      <a href="#" class="fw-bold fs-5 text-decoration-none section-title">View Edit</a>
+    </div>
+  </div>
+</section>
+
+
+   <!-- Saved Defence And Security Manager 1 -->
+
+<section class="py-4">
+  <div class="container dashboard-container">
+    <div class="row g-4 justify-content-center">
+
+      <!-- Left Column: Navigation -->
+      <div class="col-md-4 col-lg-3">
+        <div class="bg-white p-3 rounded-border-light shadow-sm">
+          <h6 class="fw-bold mb-2">My Jobs</h6>
+          <hr class="mt-0 mb-3">
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">Saved</li>
+            <li class="mb-2">In Progress</li>
+            <li class="mb-2">Applied</li>
+            <li>Archived</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column: All Sections -->
+      <div class="col-md-7 col-lg-6">
+
+        <!-- Saved Section -->
+        <div class="bg-white p-3 mb-4 rounded-border-light shadow-sm job-box">
+          <h6 class="fw-bold section-title mb-3">Saved</h6>
+
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="d-flex">
+              <img src="dashboard2.png" class="rounded me-2" width="40" height="40" alt="logo">
+              <div>
+                <div class="fw-semibold section-title2 fs-6 mb-1">Defence And Security Manager</div>
+                <div class="text-muted small">Usa.</div>
+                <div class="text-muted small mt-1">Your Profile Matches This Job<br><small>Posted 5d Ago</small></div>
+              </div>
+            </div>
+            <div class="text-muted fs-6">•••</div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="d-flex">
+              <img src="dashboard3.png" class="rounded me-2" width="40" height="40" alt="logo">
+              <div>
+                <div class="fw-semibold section-title2 fs-6 mb-1">Analista Contábil Sênior</div>
+                <div class="text-muted small">Usa.</div>
+                <div class="text-muted small mt-1">Your Profile Matches This Job<br><small>Posted 5d Ago</small></div>
+              </div>
+            </div>
+            <div class="text-muted fs-6">•••</div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-start">
+            <div class="d-flex">
+              <img src="dashboard3.png" class="rounded me-2" width="40" height="40" alt="logo">
+              <div>
+                <div class="fw-semibold section-title2 fs-6 mb-1">Information Management Specialist</div>
+                <div class="text-muted small">Usa.</div>
+                <div class="text-muted small mt-1">Your Profile Matches This Job<br><small>Posted 5d Ago</small></div>
+              </div>
+            </div>
+            <div class="text-muted fs-6">•••</div>
+          </div>
+        </div>
+
+        <!-- In Progress Section -->
+        <div class="bg-white p-3 mb-4 rounded-border-light shadow-sm job-box">
+          <h6 class="fw-bold section-title mb-3">In Progress</h6>
+
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="d-flex">
+              <img src="dashboard2.png" class="rounded me-2" width="40" height="40" alt="logo">
+              <div>
+                <div class="fw-semibold section-title2 fs-6 mb-1">Client Representative - Cable Lay/Trenching</div>
+                <div class="text-muted small">Usa.</div>
+                <div class="text-muted small mt-1">Your Profile Matches This Job<br><small>Posted 5d Ago</small></div>
+              </div>
+            </div>
+            <div class="text-muted fs-6">•••</div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="d-flex">
+              <img src="dashboard3.png" class="rounded me-2" width="40" height="40" alt="logo">
+              <div>
+                <div class="fw-semibold section-title2 fs-6 mb-1">Defence And Security Manager</div>
+                <div class="text-muted small">Usa.</div>
+                <div class="text-muted small mt-1">Your Profile Matches This Job<br><small>Posted 5d Ago</small></div>
+              </div>
+            </div>
+            <div class="text-muted fs-6">•••</div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-start">
+            <div class="d-flex">
+              <img src="dashboard3.png" class="rounded me-2" width="40" height="40" alt="logo">
+              <div>
+                <div class="fw-semibold section-title2 fs-6 mb-1">Defence And Security Manager</div>
+                <div class="text-muted small">Usa.</div>
+                <div class="text-muted small mt-1">Your Profile Matches This Job<br><small>Posted 5d Ago</small></div>
+              </div>
+            </div>
+            <div class="text-muted fs-6">•••</div>
+          </div>
+        </div>
+
+        <!-- Applied Section -->
+        <div class="bg-white p-3 mb-4 rounded-border-light shadow-sm job-box">
+          <h6 class="fw-bold section-title mb-3">Applied</h6>
+
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="d-flex">
+              <img src="dashboard2.png" class="rounded me-2" width="40" height="40" alt="logo">
+              <div>
+                <div class="fw-semibold section-title2 fs-6 mb-1">Defence And Security Manager</div>
+                <div class="text-muted small">Usa.</div>
+                <div class="text-muted small mt-1">Your Profile Matches This Job<br><small>Posted 5d Ago</small></div>
+              </div>
+            </div>
+            <div class="text-muted fs-6">•••</div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="d-flex">
+              <img src="dashboard3.png" class="rounded me-2" width="40" height="40" alt="logo">
+              <div>
+                <div class="fw-semibold section-title2 fs-6 mb-1">Defence And Security Manager</div>
+                <div class="text-muted small">Usa.</div>
+                <div class="text-muted small mt-1">Your Profile Matches This Job<br><small>Posted 5d Ago</small></div>
+              </div>
+            </div>
+            <div class="text-muted fs-6">•••</div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-start">
+            <div class="d-flex">
+              <img src="dashboard3.png" class="rounded me-2" width="40" height="40" alt="logo">
+              <div>
+                <div class="fw-semibold section-title2 fs-6 mb-1">Defence And Security Manager</div>
+                <div class="text-muted small">Usa.</div>
+                <div class="text-muted small mt-1">Your Profile Matches This Job<br><small>Posted 5d Ago</small></div>
+              </div>
+            </div>
+            <div class="text-muted fs-6">•••</div>
+          </div>
+        </div>
+
+        <!-- Archived Section -->
+        <div class="bg-white p-3 mb-4 rounded-border-light shadow-sm job-box">
+          <h6 class="fw-bold section-titlemb-3">Archived</h6>
+
+          <div class="d-flex justify-content-between align-items-start">
+            <div class="d-flex">
+              <img src="dashboard2.png" class="rounded me-2" width="40" height="40" alt="logo">
+              <div>
+                <div class="fw-semibold section-title2 fs-6 mb-1">Defence And Security Manager</div>
+                <div class="text-muted small">Usa.</div>
+                <div class="text-muted small mt-1">Your Profile Matches This Job<br><small>Posted 5d Ago</small></div>
+              </div>
+            </div>
+            <div class="text-muted fs-6">•••</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer Start -->
+  <footer class="nimbus-footer">
+    <!-- Background Decor Images -->
+
+    <img src="29.webp" alt="" class="footer-decor-left" />
+    <img src="30.webp" alt="" class="footer-decor-right" />
+
+    <div class="footer-main container py-5 ">
+      <div class="row gy-4">
+        <!-- Newsletter Section -->
+        <div class=" col-12 col-md-4">
+          <h5 class="text-white mb-3">Sign Up For Our Newsletter</h5>
+          <p class="text-light small">
+            Sign up for our monthly email newsletter for latest industry news, interviews, safety communication, updates and jobs!
+          </p>
+          <form class="newsletter-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter a valid email address" />
+              <button class="btn btn-submit" type="submit">Submit</button>
+            </div>
+          </form><br>
+          <div class="social-icons mt-3 d-flex gap-3">
+            <a href="#"><i class="bi bi-twitter text-white"></i></a>
+            <a href="#"><i class="bi bi-linkedin text-white"></i></a>
+            <a href="#"><i class="bi bi-facebook text-white"></i></a>
+          </div>
+          <div class="footer-logos mt-4 d-flex flex-wrap gap-2 align-items-center">
+            <img src="22.png" alt="Zero Harm" height="30"/><br>
+            <img src="31.png" alt="Glassdoor" height="30"/><br><br>
+            <img src="23.png" alt="Nimbus Logo" height="80"/>
+          </div>
+        </div>
+
+        <!-- Jobs -->
+        <div class="col-6 col-md-2">
+          <h6 class="footer-title">Jobs</h6>
+          <ul class="footer-list">
+            <li>Drilling Jobs</li>
+            <li>Energy Jobs</li>
+            <li>Marine Jobs</li>
+            <li>Renewables Jobs</li>
+            <li>Seismic Jobs</li>
+            <li>Management & QC Jobs</li>
+            <li>Catering Jobs</li>
+            <li>Dredging & Port Construction Jobs</li>
+            <li>Marine Environmental Jobs</li>
+            <li>QHSE Jobs</li>
+            <li>ROV, AUV & Underwater Inspection Jobs</li>
+          </ul>
+        </div>
+
+        <!-- For Professionals -->
+        <div class="col-6 col-md-2">
+          <h6 class="footer-title">For Professionals</h6>
+          <ul class="footer-list">
+            <li>Events</li>
+            <li>Greenhand Training Programme (UK)</li>
+            <li>Technical Greenhand Programme</li>
+            <li>Greenhand Training Programme (EU)</li>
+            <li>Renewable New Entrant Programme</li>
+            <li>Atlas Professionals Ex-Forces Programme</li>
+            <li>Working At Prosafe</li>
+            <li>Programa De Treinamento Greenhand Brasil</li>
+          </ul>
+        </div>
+
+        <!-- For Clients -->
+        <div class=" col-6 col-md-2">
+          <h6 class="footer-title">For Clients</h6>
+          <ul class="footer-list">
+            <li>Temporary Workforce Solutions</li>
+            <li>Outsourcing & Project Staffing</li>
+            <li>Permanent Hire & Executive Search</li>
+            <li>Atlas Technical Assessment</li>
+          </ul>
+        </div>
+
+        <!-- More Info -->
+        <div class=" col-6 col-md-2">
+          <h6 class="footer-title">More Info</h6>
+          <ul class="footer-list">
+            <li>Our Company</li>
+            <li>Group Companies</li>
+            <li>Certificates</li>
+            <li>Health & Safety</li>
+            <li>ESG</li>
+            <li>Join Our Team</li>
+            <li>Contact & Offices</li>
+            <li>FAQ</li>
+            <li>News</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom py-3 text-center text-white small">
+      <div class="container d-flex flex-wrap justify-content-center gap-3">
+        <span>Atlas Professionals | © Copyright 2025</span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Data Leak Procedure</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">General Terms & Conditions</a>
+        <a href="#">Modern Slavery Statement</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
