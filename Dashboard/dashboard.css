@@ -544,6 +544,8 @@ a { text-decoration: none; color: #000; }
 .sign-in-btn { background: var(--btn-gradient); color: var(--white); font-weight: 500; border-radius: var(--radius-medium); height: var(--input-height); font-size: var(--font-medium); border: none; }
 .sign-in-btn:hover { background: var(--btn-hover-gradient); }
 .footer-text { position: relative; font-size: var(--font-medium); bottom: 70px; width: 100%; text-align: center; }
+
+
 .bg-blur { background: url('../images/background.png') center/cover no-repeat; position: fixed; inset: 0; filter: blur(5px); width: 100vw; height: 100vh; z-index: 0; }
 .bg-dark-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.25); z-index: 1; pointer-events: none; }
 main, .container { position: relative; z-index: 2; }
