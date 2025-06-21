@@ -59,6 +59,16 @@ function triggerCountAnimation() {
 
 // Wait for DOM content before adding scroll listener
 document.addEventListener('DOMContentLoaded', function () {
+
+// 1) Resume-upload filename display
+    const uploadInput     = document.getElementById("resumeUpload");
+    const fileNameDisplay = document.getElementById("fileNameDisplay");
+    if (uploadInput && fileNameDisplay) {
+      uploadInput.addEventListener("change", function () {
+        const file = this.files[0];
+        fileNameDisplay.textContent = file ? file.name : "";
+      });
+    }
   // Initial check in case section is already visible
   triggerCountAnimation();
   window.addEventListener('scroll', triggerCountAnimation);
