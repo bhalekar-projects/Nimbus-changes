@@ -27,7 +27,7 @@
 <!--1st image of the page -->
 
 <!-- jobs-hero.html -->
-<div class="jobs-hero position-relative overflow-hidden d-flex align-items-center justify-content-center" data-aos="zoom-in">
+<div class="jobs-hero position-relative py-5 overflow-hidden d-flex align-items-center justify-content-center" data-aos="zoom-in">
   <!-- Background Image -->
   <img src="../images/background-jobs.webp" alt="Background" class="jobs-bg-img">
 
@@ -62,405 +62,428 @@
 
 
 
-  <!-- ... HERO CONTENT ... -->
-<section class="container-fluid p-0 hero-section position-relative">
-  <!-- Overlapping Search Bar -->
-  <div class="hero-searchbar-wrapper position-absolute start-50 translate-middle-x bg-white shadow rounded" style=" z-index: 10; max-width: 1200px; width: 90vw;" data-aos="fade-up" data-aos-delay="700">
-    <form class="row justify-content-center align-items-center g-0 mx-0">
-      <div class="col p-0">
-        <div class="input-group">
-          <span class="input-group-text bg-white border-0">
-            <i class="bi bi-pencil"></i>
-          </span>
-          <input type="text" class="form-control border-0" placeholder="Job title or keyword" />
-
-          <!-- Dotted Divider -->
-          <span class="hero-searchbar-divider"></span>
-
-          <span class="input-group-text bg-white border-0">
-            <i class="bi bi-geo-alt"></i>
-          </span>
-          <input type="text" class="form-control border-0" placeholder="Enter country..." />
-
-          <button type="submit" class="btn" style="background:#E94F1D; color: #fff; border: none;">Search Jobs</button>
-        </div>
+<section class="container-fluid p-0 position-relative ">
+  <div class="position-absolute start-50 translate-middle-x bg-white shadow rounded-4 p-3" style="z-index: 10; bottom: -30px;  width: 70vw; max-width: 1200px;">
+    <form class="d-flex flex-column flex-md-row gap-2 align-items-stretch">
+      
+      <!-- Job Title -->
+      <div class="input-group">
+        <span class="input-group-text bg-white border-end">
+          <i class="bi bi-pencil text-danger"></i>
+        </span>
+        <input type="text" class="form-control" placeholder="Job title or keyword" />
       </div>
+
+      <!-- Location -->
+      <div class="input-group">
+        <span class="input-group-text bg-white border-end">
+          <i class="bi bi-geo-alt text-danger"></i>
+        </span>
+        <input type="text" class="form-control" placeholder="Enter country..." />
+      </div>
+
+      <!-- Search Button -->
+      <button type="submit" class="btn btn-danger px-4">
+        Search Jobs
+      </button>
+      
     </form>
   </div>
 </section>
 
 
-<!--Jobs List Section -->
+<!-- Jobs List Section -->
 <section class="jobs-list-section py-4 mt-5">
   <div class="container">
     <div class="row g-4">
-      <!-- Sidebar -->
-      <div class="col-lg-3 ">
-        <div class="profile-card mb-3" data-aos="fade-right">
-          <div class="profile-avatar mb-2">
-            <i class="bi bi-person"></i>
+
+      <!-- Desktop Sidebar -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <div class="jobs-sidebar p-3">
+          <!-- Filters -->
+          <div class="mb-3">
+            <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#typeOfWorkCollapse">
+              <span>Type Of Work</span>
+              <span class="chevron bi bi-chevron-down"></span>
+            </button>
+            <div class="collapse show" id="typeOfWorkCollapse">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="contract"><label class="form-check-label" for="contract">Contract <span class="float-end text-muted">16</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="temporary"><label class="form-check-label" for="temporary">Temporary <span class="float-end text-muted">190</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="permanent"><label class="form-check-label" for="permanent">Permanent <span class="float-end text-muted">94</span></label></div>
+            </div>
           </div>
-          <div class="mb-2 fw-bold">Username</div>
-           <div class="mb-2 text-muted small">Diploma Chemical<br>@ Harvard Bussiness School,U</div>
-          <div class="mb-4 text-muted small">Last updated today</div>
-          <button class="btn btn-outline-danger btn-sm">Complete Profile</button>
+          <hr class="my-2">
+
+          <!-- Repeat similar blocks for each filter group -->
+
+          <div class="mb-3">
+            <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#categoryCollapse">
+              <span>Job Category</span>
+              <span class="chevron bi bi-chevron-down"></span>
+            </button>
+            <div class="collapse show" id="categoryCollapse">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="energy"><label class="form-check-label" for="energy">Energy <span class="float-end text-muted">58</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="marine"><label class="form-check-label" for="marine">Offshore Marine <span class="float-end text-muted">82</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="renewables"><label class="form-check-label" for="renewables">Renewables <span class="float-end text-muted">48</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="marine"><label class="form-check-label" for="marine">Offshore Marine <span class="float-end text-muted">82</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="renewables"><label class="form-check-label" for="renewables">Renewables <span class="float-end text-muted">48</span></label></div>
+            </div>
+          </div>
+          <hr class="my-2">
+
+          <div class="mb-3">
+            <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#durationCollapse">
+              <span>Duration</span>
+              <span class="chevron bi bi-chevron-down"></span>
+            </button>
+            <div class="collapse show" id="durationCollapse">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="4w"><label class="form-check-label" for="4w">4 weeks <span class="float-end text-muted">16</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="3m"><label class="form-check-label" for="3m">3 months <span class="float-end text-muted">58</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="marine"><label class="form-check-label" for="marine">1 year <span class="float-end text-muted">82</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="renewables"><label class="form-check-label" for="renewables">5 year <span class="float-end text-muted">48</span></label></div>
+            </div>
+          </div>
+          <hr class="my-2">
+
+          <div class="mb-3">
+            <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#countryCollapse">
+              <span>Country</span>
+              <span class="chevron bi bi-chevron-down"></span>
+            </button>
+            <div class="collapse show" id="countryCollapse">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="denmark"><label class="form-check-label" for="denmark">Denmark <span class="float-end text-muted">12</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="norway"><label class="form-check-label" for="norway">Norway <span class="float-end text-muted">22</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="marine"><label class="form-check-label" for="marine">India <span class="float-end text-muted">82</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="renewables"><label class="form-check-label" for="renewables">Malasiya<span class="float-end text-muted">48</span></label></div>
+            </div>
+          </div>
+          <hr class="my-2">
+
+          <div class="mb-3">
+            <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#regionCollapse">
+              <span>Region</span>
+              <span class="chevron bi bi-chevron-down"></span>
+            </button>
+            <div class="collapse show" id="regionCollapse">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="europe"><label class="form-check-label" for="europe">Europe <span class="float-end text-muted">32</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="asia"><label class="form-check-label" for="asia">Asia <span class="float-end text-muted">10</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="marine"><label class="form-check-label" for="marine">Singapore <span class="float-end text-muted">82</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="renewables"><label class="form-check-label" for="renewables">Indonesia <span class="float-end text-muted">48</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="marine"><label class="form-check-label" for="marine">Dubai <span class="float-end text-muted">82</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="renewables"><label class="form-check-label" for="renewables">Iran <span class="float-end text-muted">48</span></label></div>
+            </div>
+          </div>
+          <hr class="my-2">
+
+          <div class="mb-3">
+            <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#scheduleCollapse">
+              <span>Schedule</span>
+              <span class="chevron bi bi-chevron-down"></span>
+            </button>
+            <div class="collapse show" id="scheduleCollapse">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="full"><label class="form-check-label" for="full">Full Time <span class="float-end text-muted">34</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="part"><label class="form-check-label" for="part">Part Time <span class="float-end text-muted">8</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="marine"><label class="form-check-label" for="marine">Internship <span class="float-end text-muted">82</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="renewables"><label class="form-check-label" for="renewables"> part-time<span class="float-end text-muted">48</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="marine"><label class="form-check-label" for="marine">Offshore Marine <span class="float-end text-muted">82</span></label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="renewables"><label class="form-check-label" for="renewables">Renewables <span class="float-end text-muted">48</span></label></div>
+            </div>
+            <hr class="my-2">
+            <div class="text-center mt-2">
+            <a href="#" class="show-more-link">Show More</a>
+            </div>
+          </div>
+
+          <!-- Email Alert -->
+          <div class="email-alert-card mt-4">
+            <div class="mb-2 fw-bold">Fresh Vacancies<br>Directly In Your Mailbox</div>
+            <div class="mb-2 small">Create job alert so you can receive latest info by e-mail or recommended jobs that match your preferences.</div>
+            <button class="btn btn-light w-100 rounded-pill">Create Email Alert</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Listings -->
+      <div class="col-lg-9">
+
+        <!-- Mobile Filter Button -->
+        <div class="d-block d-lg-none text-end mb-3">
+          <button class="btn btn-outline-danger" data-bs-toggle="offcanvas" data-bs-target="#mobileFilterSidebar">
+            <i class="bi bi-funnel-fill"></i> Filters
+          </button>
         </div>
 
-        <!-- Filters -->
-        <div class="jobs-sidebar p-3" data-aos="fade-right" data-aos-delay="200">
-  <!-- Type Of Work -->
-  <div class="mb-3">
-    <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#typeOfWorkCollapse" aria-expanded="true">
-      <span>Type Of Work</span>
-      <span class="chevron bi bi-chevron-down"></span>
-    </button>
-    <div class="collapse show" id="typeOfWorkCollapse">
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="contract"><label class="form-check-label" for="contract">Contract <span class="float-end text-muted">16</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="temporary"><label class="form-check-label" for="temporary">Temporary <span class="float-end text-muted">190</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="permanent"><label class="form-check-label" for="permanent">Permanent <span class="float-end text-muted">94</span></label></div>
-    </div>
-  </div>
-  <hr class="my-2">
-  <!-- Job Category -->
-  <div class="mb-3">
-    <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#jobCategoryCollapse" aria-expanded="true">
-      <span>Job Category</span>
-      <span class="chevron bi bi-chevron-down"></span>
-    </button>
-    <div class="collapse show" id="jobCategoryCollapse">
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="drilling"><label class="form-check-label" for="drilling">Drilling & Well Services <span class="float-end text-muted">16</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="energy"><label class="form-check-label" for="energy">Energy <span class="float-end text-muted">58</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="offshore"><label class="form-check-label" for="offshore">Offshore Marine <span class="float-end text-muted">82</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="renewables"><label class="form-check-label" for="renewables">Renewables <span class="float-end text-muted">48</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="seismic"><label class="form-check-label" for="seismic">Seismic <span class="float-end text-muted">2</span></label></div>
-      <div class="text-center mt-2">
-        <a href="#" class="show-more-link">Show More</a>
+        <!-- Header -->
+        <div class="mb-3">
+          <img src="../images/moment-captured-migration-crisis-with-people.png" alt="Header" class="w-100 jobs-header-img mb-3" data-aos="zoom-in">
+          <div class="jobs-results-alert text-center fw-semibold mb-0 py-4">Showing 304 Search Results</div>
+        </div>
+
+        <!-- Job Card Example -->
+        <div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <span class="job-title">Defence And Security Manager</span>
+            <div class="d-flex align-items-center gap-2">
+              <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
+              <button class="badge job-featured-badge px-3 py-2">Featured</button>
+              <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
+            <span><i class="bi bi-grid"></i> Offshore Wind</span>
+            <span><i class="bi bi-geo-alt"></i> Denmark</span>
+            <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
+            <span><i class="bi bi-clock"></i> 6 Months</span>
+          </div>
+          <div class="job-desc text-secondary small">
+            Atlas Professionals Are Searching For An Experienced Defence And Security Manager. Based In Gentofte, Denmark...
+          </div>
+        </div>
+
+        <div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <span class="job-title">Defence And Security Manager</span>
+            <div class="d-flex align-items-center gap-2">
+              <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
+              <button class="badge job-featured-badge px-3 py-2">Featured</button>
+              <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
+            <span><i class="bi bi-grid"></i> Offshore Wind</span>
+            <span><i class="bi bi-geo-alt"></i> Denmark</span>
+            <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
+            <span><i class="bi bi-clock"></i> 6 Months</span>
+          </div>
+          <div class="job-desc text-secondary small">
+            Atlas Professionals Are Searching For An Experienced Defence And Security Manager. Based In Gentofte, Denmark...
+          </div>
+        </div>
+
+        <div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <span class="job-title">Defence And Security Manager</span>
+            <div class="d-flex align-items-center gap-2">
+              <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
+              <button class="badge job-featured-badge px-3 py-2">Featured</button>
+              <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
+            <span><i class="bi bi-grid"></i> Offshore Wind</span>
+            <span><i class="bi bi-geo-alt"></i> Denmark</span>
+            <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
+            <span><i class="bi bi-clock"></i> 6 Months</span>
+          </div>
+          <div class="job-desc text-secondary small">
+            Atlas Professionals Are Searching For An Experienced Defence And Security Manager. Based In Gentofte, Denmark...
+          </div>
+        </div>
+
+
+        <div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <span class="job-title">Defence And Security Manager</span>
+            <div class="d-flex align-items-center gap-2">
+              <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
+              <button class="badge job-featured-badge px-3 py-2">Featured</button>
+              <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
+            <span><i class="bi bi-grid"></i> Offshore Wind</span>
+            <span><i class="bi bi-geo-alt"></i> Denmark</span>
+            <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
+            <span><i class="bi bi-clock"></i> 6 Months</span>
+          </div>
+          <div class="job-desc text-secondary small">
+            Atlas Professionals Are Searching For An Experienced Defence And Security Manager. Based In Gentofte, Denmark...
+          </div>
+        </div>
+        
+
+        <div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <span class="job-title">Defence And Security Manager</span>
+            <div class="d-flex align-items-center gap-2">
+              <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
+              <button class="badge job-featured-badge px-3 py-2">Featured</button>
+              <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
+            <span><i class="bi bi-grid"></i> Offshore Wind</span>
+            <span><i class="bi bi-geo-alt"></i> Denmark</span>
+            <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
+            <span><i class="bi bi-clock"></i> 6 Months</span>
+          </div>
+          <div class="job-desc text-secondary small">
+            Atlas Professionals Are Searching For An Experienced Defence And Security Manager. Based In Gentofte, Denmark...
+          </div>
+        </div>
+        
+
+        <div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <span class="job-title">Defence And Security Manager</span>
+            <div class="d-flex align-items-center gap-2">
+              <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
+              <button class="badge job-featured-badge px-3 py-2">Featured</button>
+              <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
+            <span><i class="bi bi-grid"></i> Offshore Wind</span>
+            <span><i class="bi bi-geo-alt"></i> Denmark</span>
+            <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
+            <span><i class="bi bi-clock"></i> 6 Months</span>
+          </div>
+          <div class="job-desc text-secondary small">
+            Atlas Professionals Are Searching For An Experienced Defence And Security Manager. Based In Gentofte, Denmark...
+          </div>
+        </div>
+
+        <div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <span class="job-title">Defence And Security Manager</span>
+            <div class="d-flex align-items-center gap-2">
+              <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
+              <button class="badge job-featured-badge px-3 py-2">Featured</button>
+              <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
+            <span><i class="bi bi-grid"></i> Offshore Wind</span>
+            <span><i class="bi bi-geo-alt"></i> Denmark</span>
+            <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
+            <span><i class="bi bi-clock"></i> 6 Months</span>
+          </div>
+          <div class="job-desc text-secondary small">
+            Atlas Professionals Are Searching For An Experienced Defence And Security Manager. Based In Gentofte, Denmark...
+          </div>
+        </div>
+
+        
+        
+
+
+        <!-- Tips Section -->
+        <div class="interview-tips-row" data-aos="fade-up">
+          <img src="../images/interview-table.png" alt="Interview" class="tips-img">
+          <div class="tips-box">
+            <div class="tips-title">5 Interview Preparation Tips</div>
+            <ol class="tips-list">
+              <li>Analyse The Vacancy.</li>
+              <li>Be Ready For An Online Interview.</li>
+              <li>Prepare For Possible Questions.</li>
+              <li>Practise Your Answers.</li>
+              <li>Ask Your Questions.</li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-
-  <!-- Duration -->
-   <hr class="my-2">
-  <div class="mb-3">
-    <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#jobCategoryCollapse" aria-expanded="true">
-      <span>Duration</span>
-      <span class="chevron bi bi-chevron-down"></span>
-    </button>
-    <div class="collapse show" id="jobCategoryCollapse">
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="4 weeks"><label class="form-check-label" for="drilling">4 weeks <span class="float-end text-muted">16</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="3 months"><label class="form-check-label" for="energy">3 months <span class="float-end text-muted">58</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id=">1 year"><label class="form-check-label" for="offshore">1 year <span class="float-end text-muted">82</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="2 months"><label class="form-check-label" for="renewables">2 months <span class="float-end text-muted">48</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="6 weeks"><label class="form-check-label" for="seismic">6 weeks <span class="float-end text-muted">2</span></label></div>
-      <div class="text-center mt-2">
-        <a href="#" class="show-more-link">Show More</a>
-      </div>
+  <!-- Offcanvas Filter Sidebar (Mobile Only) -->
+  <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileFilterSidebar" aria-labelledby="mobileFilterSidebarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileFilterSidebarLabel">Filters</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-  </div>
+    <div class="offcanvas-body">
+      <div class="jobs-sidebar p-3">
+        <!-- Repeat all filters for mobile -->
+        <div class="mb-3">
+          <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#typeOfWorkMobile">
+            <span>Type Of Work</span>
+            <span class="chevron bi bi-chevron-down"></span>
+          </button>
+          <div class="collapse show" id="typeOfWorkMobile">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="contract-m"><label class="form-check-label" for="contract-m">Contract</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="temporary-m"><label class="form-check-label" for="temporary-m">Temporary</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="permanent-m"><label class="form-check-label" for="permanent-m">Permanent</label></div>
+          </div>
+        </div>
+        <hr class="my-2">
 
-  <!-- Country -->
-   <hr class="my-2">
-  <div class="mb-3">
-    <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#jobCategoryCollapse" aria-expanded="true">
-      <span>Country</span>
-      <span class="chevron bi bi-chevron-down"></span>
-    </button>
-    <div class="collapse show" id="jobCategoryCollapse">
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="4 weeks"><label class="form-check-label" for="drilling">4 weeks <span class="float-end text-muted">16</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="3 months"><label class="form-check-label" for="energy">3 months <span class="float-end text-muted">58</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id=">1 year"><label class="form-check-label" for="offshore">1 year <span class="float-end text-muted">82</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="2 months"><label class="form-check-label" for="renewables">2 months <span class="float-end text-muted">48</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="6 weeks"><label class="form-check-label" for="seismic">6 weeks <span class="float-end text-muted">2</span></label></div>
-      <div class="text-center mt-2">
-        <a href="#" class="show-more-link">Show More</a>
-      </div>
-    </div>
-  </div>
+        <div class="mb-3">
+          <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#categoryMobile">
+            <span>Job Category</span>
+            <span class="chevron bi bi-chevron-down"></span>
+          </button>
+          <div class="collapse show" id="categoryMobile">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="energy-m"><label class="form-check-label" for="energy-m">Energy</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="marine-m"><label class="form-check-label" for="marine-m">Offshore Marine</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="renewables-m"><label class="form-check-label" for="renewables-m">Renewables</label></div>
+          </div>
+        </div>
+        <hr class="my-2">
 
+        <div class="mb-3">
+          <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#durationMobile">
+            <span>Duration</span>
+            <span class="chevron bi bi-chevron-down"></span>
+          </button>
+          <div class="collapse show" id="durationMobile">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="4w-m"><label class="form-check-label" for="4w-m">4 weeks</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="3m-m"><label class="form-check-label" for="3m-m">3 months</label></div>
+          </div>
+        </div>
+        <hr class="my-2">
 
-  <!-- Region -->
-   <hr class="my-2">
-  <div class="mb-3">
-    <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#jobCategoryCollapse" aria-expanded="true">
-      <span>Region</span>
-      <span class="chevron bi bi-chevron-down"></span>
-    </button>
-    <div class="collapse show" id="jobCategoryCollapse">
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="North America"><label class="form-check-label" for="drilling">North America <span class="float-end text-muted">16</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="Europe"><label class="form-check-label" for="energy">Europe <span class="float-end text-muted">58</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id=">South America"><label class="form-check-label" for="offshore"> South America <span class="float-end text-muted">82</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="Africa"><label class="form-check-label" for="renewables">Africa <span class="float-end text-muted">48</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="Asia"><label class="form-check-label" for="seismic">Asia <span class="float-end text-muted">2</span></label></div>
-      <div class="text-center mt-2">
-        <a href="#" class="show-more-link">Show More</a>
-      </div>
-    </div>
-  </div>
+        <div class="mb-3">
+          <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#countryMobile">
+            <span>Country</span>
+            <span class="chevron bi bi-chevron-down"></span>
+          </button>
+          <div class="collapse show" id="countryMobile">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="denmark-m"><label class="form-check-label" for="denmark-m">Denmark</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="norway-m"><label class="form-check-label" for="norway-m">Norway</label></div>
+          </div>
+        </div>
+        <hr class="my-2">
 
-  <!-- Schedule -->
-   <hr class="my-2">
-  <div class="mb-3">
-    <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#jobCategoryCollapse" aria-expanded="true">
-      <span>Schedule</span>
-      <span class="chevron bi bi-chevron-down"></span>
-    </button>
-    <div class="collapse show" id="jobCategoryCollapse">
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="4 weeks"><label class="form-check-label" for="drilling">4 weeks <span class="float-end text-muted">16</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="3 months"><label class="form-check-label" for="energy">3 months <span class="float-end text-muted">58</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id=">1 year"><label class="form-check-label" for="offshore">1 year <span class="float-end text-muted">82</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="2 months"><label class="form-check-label" for="renewables">2 months <span class="float-end text-muted">48</span></label></div>
-      <div class="form-check"><input class="form-check-input" type="checkbox" id="6 weeks"><label class="form-check-label" for="seismic">6 weeks <span class="float-end text-muted">2</span></label></div>
-      <div class="text-center mt-2">
-        <a href="#" class="show-more-link">Show More</a>
-      </div>
-    </div>
-    <hr class="my-2">
-  </div>
+        <div class="mb-3">
+          <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#regionMobile">
+            <span>Region</span>
+            <span class="chevron bi bi-chevron-down"></span>
+          </button>
+          <div class="collapse show" id="regionMobile">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="europe-m"><label class="form-check-label" for="europe-m">Europe</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="asia-m"><label class="form-check-label" for="asia-m">Asia</label></div>
+          </div>
+        </div>
+        <hr class="my-2">
 
+        <div class="mb-3">
+          <button class="filter-title d-flex justify-content-between align-items-center w-100" data-bs-toggle="collapse" data-bs-target="#scheduleMobile">
+            <span>Schedule</span>
+            <span class="chevron bi bi-chevron-down"></span>
+          </button>
+          <div class="collapse show" id="scheduleMobile">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="full-m"><label class="form-check-label" for="full-m">Full Time</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="part-m"><label class="form-check-label" for="part-m">Part Time</label></div>
+          </div>
+        </div>
 
-</div>
-
-        <div class="email-alert-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="email-alert-card">
           <div class="mb-2 fw-bold">Fresh Vacancies<br>Directly In Your Mailbox</div>
           <div class="mb-2 small">Create job alert so you can receive latest info by e-mail or recommended jobs that match your preferences.</div>
           <button class="btn btn-light w-100 rounded-pill">Create Email Alert</button>
         </div>
       </div>
-
-      <!-- Main content -->
-      <div class="col-lg-9">
-        <div class="row g-3 mb-3 align-items-center">
-          <div class="mb-3">
-      <img src="../images/moment-captured-migration-crisis-with-people.png" alt="Header" class="w-100 jobs-header-img mb-3" data-aos="zoom-in">
-      <div class=" jobs-results-alert text-center fw-semibold mb-0">
-        Showing 304 Search Results
-        </div>
-        </div>
-        </div>
-        
-        
-        <div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="100">
-  <div class="d-flex justify-content-between align-items-start mb-1">
-    <span class="job-title">Defence And Security Manager</span>
-    <div class="d-flex align-items-center gap-2">
-     <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
-      <button class="badge job-featured-badge px-3 py-2">Featured</button>
-      <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
+         <!-- Apply Filter Button at the bottom -->
+      <div class="p-3">
+        <button class="btn btn-danger w-100" data-bs-dismiss="offcanvas">Apply Filters</button>
+      </div>
     </div>
   </div>
-  <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
-    <span><i class="bi bi-grid"></i> Renewables, Offshore Wind, Onshore Wind</span>
-    <span><i class="bi bi-geo-alt"></i> Denmark</span>
-    <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
-    <span><i class="bi bi-clock"></i> 6 Months</span>
-  </div>
-  <div class="job-desc text-secondary small">
-    Atlas Professionals Are Searching For An Experienced Defence And Security Manager, The Role Is Based In Gentofte, Denmark. This Project Is A Short Term 6 Month Contract, With A Real Potential For Exte...
-  </div>
-</div>
-
-<div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="200">
-  <div class="d-flex justify-content-between align-items-start mb-1">
-    <span class="job-title">Defence And Security Manager</span>
-    <div class="d-flex align-items-center gap-2">
-       <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
-      <button class="badge job-featured-badge px-3 py-2">Featured</button>
-      <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
-    </div>
-  </div>
-  <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
-    <span><i class="bi bi-grid"></i> Renewables, Offshore Wind, Onshore Wind</span>
-    <span><i class="bi bi-geo-alt"></i> Denmark</span>
-    <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
-    <span><i class="bi bi-clock"></i> 6 Months</span>
-  </div>
-  <div class="job-desc text-secondary small">
-    Atlas Professionals Are Searching For An Experienced Defence And Security Manager, The Role Is Based In Gentofte, Denmark. This Project Is A Short Term 6 Month Contract, With A Real Potential For Exte...
-  </div>
-</div>
-
-<div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="300">
-  <div class="d-flex justify-content-between align-items-start mb-1">
-    <span class="job-title">Defence And Security Manager</span>
-    <div class="d-flex align-items-center gap-2">
-       <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
-      <button class="badge job-featured-badge px-3 py-2">Featured</button>
-      <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
-    </div>
-  </div>
-  <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
-    <span><i class="bi bi-grid"></i> Renewables, Offshore Wind, Onshore Wind</span>
-    <span><i class="bi bi-geo-alt"></i> Denmark</span>
-    <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
-    <span><i class="bi bi-clock"></i> 6 Months</span>
-  </div>
-  <div class="job-desc text-secondary small">
-    Atlas Professionals Are Searching For An Experienced Defence And Security Manager, The Role Is Based In Gentofte, Denmark. This Project Is A Short Term 6 Month Contract, With A Real Potential For Exte...
-  </div>
-</div>
-
-<div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="400">
-  <div class="d-flex justify-content-between align-items-start mb-1">
-    <span class="job-title">Defence And Security Manager</span>
-    <div class="d-flex align-items-center gap-2">
-       <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
-      <button class="badge job-featured-badge px-3 py-2">Featured</button>
-      <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
-    </div>
-  </div>
-  <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
-    <span><i class="bi bi-grid"></i> Renewables, Offshore Wind, Onshore Wind</span>
-    <span><i class="bi bi-geo-alt"></i> Denmark</span>
-    <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
-    <span><i class="bi bi-clock"></i> 6 Months</span>
-  </div>
-  <div class="job-desc text-secondary small">
-    Atlas Professionals Are Searching For An Experienced Defence And Security Manager, The Role Is Based In Gentofte, Denmark. This Project Is A Short Term 6 Month Contract, With A Real Potential For Exte...
-  </div>
-</div>
-
-<div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="500">
-  <div class="d-flex justify-content-between align-items-start mb-1">
-    <span class="job-title">Defence And Security Manager</span>
-    <div class="d-flex align-items-center gap-2">
-       <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
-      <button class="badge job-featured-badge px-3 py-2">Featured</button>
-      <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
-    </div>
-  </div>
-  <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
-    <span><i class="bi bi-grid"></i> Renewables, Offshore Wind, Onshore Wind</span>
-    <span><i class="bi bi-geo-alt"></i> Denmark</span>
-    <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
-    <span><i class="bi bi-clock"></i> 6 Months</span>
-  </div>
-  <div class="job-desc text-secondary small">
-    Atlas Professionals Are Searching For An Experienced Defence And Security Manager, The Role Is Based In Gentofte, Denmark. This Project Is A Short Term 6 Month Contract, With A Real Potential For Exte...
-  </div>
-</div>
-
-<div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="600">
-  <div class="d-flex justify-content-between align-items-start mb-1">
-    <span class="job-title">Defence And Security Manager</span>
-    <div class="d-flex align-items-center gap-2">
-       <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
-      <button class="badge job-featured-badge px-3 py-2">Featured</button>
-      <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
-    </div>
-  </div>
-  <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
-    <span><i class="bi bi-grid"></i> Renewables, Offshore Wind, Onshore Wind</span>
-    <span><i class="bi bi-geo-alt"></i> Denmark</span>
-    <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
-    <span><i class="bi bi-clock"></i> 6 Months</span>
-  </div>
-  <div class="job-desc text-secondary small">
-    Atlas Professionals Are Searching For An Experienced Defence And Security Manager, The Role Is Based In Gentofte, Denmark. This Project Is A Short Term 6 Month Contract, With A Real Potential For Exte...
-  </div>
-</div>
-
-<div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="700">
-  <div class="d-flex justify-content-between align-items-start mb-1">
-    <span class="job-title">Defence And Security Manager</span>
-    <div class="d-flex align-items-center gap-2">
-     <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
-
-      <button class="badge job-featured-badge px-3 py-2">Featured</button>
-      <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
-    </div>
-  </div>
-  <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
-    <span><i class="bi bi-grid"></i> Renewables, Offshore Wind, Onshore Wind</span>
-    <span><i class="bi bi-geo-alt"></i> Denmark</span>
-    <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
-    <span><i class="bi bi-clock"></i> 6 Months</span>
-  </div>
-  <div class="job-desc text-secondary small">
-    Atlas Professionals Are Searching For An Experienced Defence And Security Manager, The Role Is Based In Gentofte, Denmark. This Project Is A Short Term 6 Month Contract, With A Real Potential For Exte...
-  </div>
-</div>
-
-<div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="800">
-  <div class="d-flex justify-content-between align-items-start mb-1">
-    <span class="job-title">Defence And Security Manager</span>
-    <div class="d-flex align-items-center gap-2">
-       <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
-      <button class="badge job-featured-badge px-3 py-2">Featured</button>
-      <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
-    </div>
-  </div>
-  <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
-    <span><i class="bi bi-grid"></i> Renewables, Offshore Wind, Onshore Wind</span>
-    <span><i class="bi bi-geo-alt"></i> Denmark</span>
-    <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
-    <span><i class="bi bi-clock"></i> 6 Months</span>
-  </div>
-  <div class="job-desc text-secondary small">
-    Atlas Professionals Are Searching For An Experienced Defence And Security Manager, The Role Is Based In Gentofte, Denmark. This Project Is A Short Term 6 Month Contract, With A Real Potential For Exte...
-  </div>
-</div>
-
-<div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="900">
-  <div class="d-flex justify-content-between align-items-start mb-1">
-    <span class="job-title">Defence And Security Manager</span>
-    <div class="d-flex align-items-center gap-2">
-       <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
-      <button class="badge job-featured-badge px-3 py-2">Featured</button>
-      <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
-    </div>
-  </div>
-  <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
-    <span><i class="bi bi-grid"></i> Renewables, Offshore Wind, Onshore Wind</span>
-    <span><i class="bi bi-geo-alt"></i> Denmark</span>
-    <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
-    <span><i class="bi bi-clock"></i> 6 Months</span>
-  </div>
-  <div class="job-desc text-secondary small">
-    Atlas Professionals Are Searching For An Experienced Defence And Security Manager, The Role Is Based In Gentofte, Denmark. This Project Is A Short Term 6 Month Contract, With A Real Potential For Exte...
-  </div>
-</div>
-
-<div class="card card-job mb-3 p-3" data-aos="fade-up" data-aos-delay="1000">
-  <div class="d-flex justify-content-between align-items-start mb-1">
-    <span class="job-title">Defence And Security Manager</span>
-    <div class="d-flex align-items-center gap-2">
-       <a href="/jobs_index/jobs_dasboardone.html" class="badge btn-success btn-sm job-apply-btn px-3 py-2 text-decoration-none">Apply</a>
-      <button class="badge job-featured-badge px-3 py-2">Featured</button>
-      <button class="btn btn-light btn-sm p-0"><i class="bi bi-heart"></i></button>
-    </div>
-  </div>
-  <div class="d-flex flex-wrap align-items-center text-muted small mb-2 gap-3">
-    <span><i class="bi bi-grid"></i> Renewables, Offshore Wind, Onshore Wind</span>
-    <span><i class="bi bi-geo-alt"></i> Denmark</span>
-    <span><i class="bi bi-calendar"></i> Start On June 2, 2025</span>
-    <span><i class="bi bi-clock"></i> 6 Months</span>
-  </div>
-  <div class="job-desc text-secondary small">
-    Atlas Professionals Are Searching For An Experienced Defence And Security Manager, The Role Is Based In Gentofte, Denmark. This Project Is A Short Term 6 Month Contract, With A Real Potential For Exte...
-  </div>
-</div>
 
 
-<!-- tips for interview image -->
-      <div class="interview-tips-row" data-aos="fade-left" data-aos-offset="100">
-  <img src="../images/interview-table.png" alt="Interview" class="tips-img">
-  <div class="tips-box" data-aos="fade-left" data-aos-offset="200">
-    <div class="tips-title">5 Interview Preparation Tips</div>
-    <ol class="tips-list">
-      <li>Analyse The Vacancy.</li>
-      <li>Be Ready For An Online Interview.</li>
-      <li>Prepare For Possible Questions.</li>
-      <li>Practise Your Answers.</li>
-      <li>Ask Your Questions.</li>
-    </ol>
-  </div>
-</div>
-
-  </div> 
-
-</section>
-
+          
+ 
 
 </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

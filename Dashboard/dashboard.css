@@ -74,6 +74,16 @@
 body, html { height: 100%; margin: 0; padding: 0; font-family: 'Roboto', Arial, sans-serif; min-height: 100vh; }
 a { text-decoration: none; color: #000; }
 
+/* make every .nav-icon a perfect square */
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;    /* adjust as needed */
+  height: 1.5rem;   /* same as width */
+}
+
+
 /* ======================
    DASHBOARD.CSS CONTENT
    (excluding root)
@@ -134,7 +144,7 @@ a { text-decoration: none; color: #000; }
 .industry-img { width: 100%; aspect-ratio: 1.1/1.25; object-fit: cover; display: block; border-radius: 12px; transition: box-shadow 0.3s cubic-bezier(.23,1.02,.51,.98), transform 0.3s cubic-bezier(.23,1.02,.51,.98); }
 .col-6:hover .industry-img, .col-md-4:hover .industry-img, .col-lg-2:hover .industry-img { box-shadow: 0 6px 24px var(--industry-img-shadow); transform: translateY(-10px); }
 .industry-label { font-weight: 500; margin-top: 0.5rem; padding:45px; color: var(--primary-red); }
-@media (max-width: 991px) { .industry-img { aspect-ratio: 1/1; } }
+@media (max-width: 991px) and (height: 10px) { .industry-img { aspect-ratio: 1/1; } }
 
 /* Numbers section */
 .numbers-section { min-height: 310px; background: url('../images/atlas-background.png') center center/cover no-repeat; color: var(--white); }
@@ -200,17 +210,124 @@ a { text-decoration: none; color: #000; }
 .values-banner-title { font-size: 1.1rem; }
 .btn-atlas-gradient:hover, .btn-atlas-gradient:focus { filter: brightness(1.07); }
 
-/* About Section */
-:root { --nimbus-gradient: linear-gradient(180deg, #ff6700 0%, #d13400 100%); }
-.about-text-col { font-family: 'Roboto', Arial, sans-serif; padding-left: 60px; }
-.about-image-col { min-height: 620px; justify-content: center; }
-.about-accent-box { background: var(--nimbus-gradient); width: 75%; max-width: 170px; height: 90%; min-height: 420px; position: absolute; right: 0; top: 0; z-index: 1; }
-.about-img { position: relative; border-radius: 18px; border: 4px solid #fff; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16); width: 80%; max-height: 550px; margin-right: -70px; display: block; margin-top: 35px; margin-bottom: 35px; background: none; z-index: 2; }
-.about-anchor, .about-anchor-left { width: 135px; height: 195px; z-index: 3; }
-.about-anchor { left: 90px; bottom: -24px; }
-.about-anchor-left { right: 80px; bottom: -24px; }
-.about-img-left { position: relative; border-radius: 18px; border: 4px solid #fff; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16); width: 80%; max-height: 550px; margin-left: -90px; display: block; margin-top: 35px; margin-bottom: 35px; background: none; z-index: 2; }
-@media (max-width: 991px) { .about-accent-box { max-width: 20px; height: 50%; } .about-img { width: 94%; max-height: 490px; } .about-anchor { width: 140px; left: 24px; bottom: -12px; } }
+/* About Section  2 cards section */  
+:root {
+  --nimbus-gradient: linear-gradient(180deg, #ff6700 0%, #d13400 100%);
+}
+
+/* Base styles */
+.about-text-col {
+  font-family: 'Roboto', Arial, sans-serif;
+  padding-left: 60px;
+}
+
+.about-image-col {
+  position: relative;
+  min-height: 620px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-accent-box {
+  background: var(--nimbus-gradient);
+  width: 75%;
+  max-width: 170px;
+  height: 90%;
+  min-height: 420px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.about-img,
+.about-img-left {
+  position: relative;
+  border-radius: 18px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16);
+  width: 80%;
+  max-height: 550px;
+  display: block;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  background: none;
+  z-index: 2;
+}
+
+.about-img {
+  margin-right: -70px;
+}
+
+.about-img-left {
+  margin-left: -90px;
+}
+
+.about-anchor,
+.about-anchor-left {
+  position: absolute;
+  width: 135px;
+  height: 195px;
+  bottom: -24px;
+  z-index: 3;
+}
+
+.about-anchor {
+  left: 90px;
+}
+
+.about-anchor-left {
+  right: 80px;
+}
+
+/* Mobile / Tablet Overrides */
+@media (max-width: 991.98px) {
+  /* 1) Stack text + image vertically */
+  .about-section .row {
+    flex-direction: column;
+  }
+  .about-left,
+  .about-image-col {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* 2) Let the card & anchor overflow the container */
+  .about-image-col {
+    overflow: visible !important;
+    margin-top: 1.5rem;
+  }
+
+  /* 3) Shrink & reposition the accent box */
+  .about-accent-box {
+    display: block;
+    max-width: 120px;
+    height: 120px;
+    top: 10px;
+    right: 10px;
+    border-radius: 12px;
+  }
+
+  /* 4) Make the card image full-width (with a max) */
+  .about-img,
+  .about-img-left {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 2rem;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  /* 5) Position the anchor icon half-outside bottom-left */
+  .about-anchor,
+  .about-anchor-left {
+    bottom: -20px;
+    left: 16px;
+    width: 120px;
+    height: auto;
+  }
+}
+
 
 /* Join Our Team */
 .section-title { font-weight: bold; font-size: 1.8rem; color: #a32017 !important; }
@@ -267,6 +384,8 @@ a { text-decoration: none; color: #000; }
    NAVBAR.CSS CONTENT
    (excluding reset)
    ====================== */
+
+
 @media (min-width: 992px) {
   .navbar { border-top: 13px solid #A31610; padding-top: 0.5rem; padding-bottom: 0.5rem; min-height: 100px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
   .nav-logo img, .nav-logo-img { height: 80px !important; }
@@ -298,6 +417,29 @@ a { text-decoration: none; color: #000; }
   .mobile-search .search-inside-icon { position: absolute; left: 1.4rem; top: 50%; transform: translateY(-50%); color: #A31610; font-size: 1.22rem; pointer-events: none; z-index: 2; line-height: 1; }
   .mobile-icons-vertical { background: #fff; border-radius: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.06); padding: 0.5rem 0.75rem; right: 12px; top: 56px; z-index: 1000; }
 }
+
+/* Mega-dropdown widths on desktop */
+@media (min-width: 992px) {
+  .mega-dropdown {
+    width: 500px;              /* desktop width for Jobs, Professionals, Clients */
+  }
+  /* if “About” should be 400px, give it a helper class: */
+  .mega-dropdown.about-menu {
+    width: 400px;
+  }
+}
+
+/* Mega-dropdown full-width and visible on mobile */
+@media (max-width: 991px) {
+  .mega-dropdown {
+    position: static   !important;
+    width:    100%     !important;
+    transform:none     !important;  /* cancel the start-50/translate-middle-x */
+    margin:   0        !important;
+    box-shadow:none    !important;
+  }
+}
+
 
 /* ======================
    NEED-AN-ACCOUNT.CSS CONTENT
@@ -865,3 +1007,152 @@ hr { border-color: #ececec; }
   .tips-box { padding: 12px 5px 10px; }
   .tips-title { font-size: 1rem; }
 }
+
+/* News PAGES */
+
+/* ==========================================================================
+   Nimbus Dashboard Overrides
+   ========================================================================== */
+
+/* —————————————————————————————————————————————
+   1. Brand & Base Typography
+   ————————————————————————————————————————————— */
+:root {
+  --nimbus-primary:   #ff6700;
+  --nimbus-secondary: #d13400;
+  --nimbus-dark:      #0c1c2c;
+  --nimbus-light:     #f9f9f9;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #333;
+  background-color: var(--nimbus-light);
+}
+
+/* Section headings */
+.section-title {
+  color: var(--nimbus-secondary);
+  font-weight: 600;
+  margin-bottom: .75rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.section-title i {
+  margin-right: .5rem;
+  color: var(--nimbus-primary);
+}
+
+/* Sizes for different heading levels */
+h1.section-title { font-size: 2rem; }
+h2.section-title { font-size: 1.75rem; }
+h3.section-title { font-size: 1.5rem; }
+h5.section-title { font-size: 1.25rem; }
+
+/* —————————————————————————————————————————————
+   2. News Cards
+   ————————————————————————————————————————————— */
+.news-card {
+  border: none;
+  border-radius: .5rem;
+  overflow: hidden;
+  background: #fff;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Cap the image height */
+.news-card .card-img-top {
+  object-fit: cover;
+  height: 180px;
+}
+
+/* Tidy up card body spacing */
+.news-card .card-body {
+  padding: 1.25rem;
+}
+
+/* Custom outline-danger button */
+.news-card .btn-outline-danger {
+  border-color: var(--nimbus-secondary);
+  color: var(--nimbus-secondary);
+}
+.news-card .btn-outline-danger:hover {
+  background-color: var(--nimbus-secondary);
+  color: #fff;
+}
+
+/* —————————————————————————————————————————————
+   3. Featured Story & Gallery
+   ————————————————————————————————————————————— */
+/* Larger lead text */
+.lead {
+  font-size: 1.125rem;
+  color: #555;
+}
+
+/* Simple hover scale on gallery items */
+.img-fluid.rounded {
+  transition: transform .3s ease;
+}
+.img-fluid.rounded:hover {
+  transform: scale(1.03);
+}
+
+/* —————————————————————————————————————————————
+   4. Newsletter Signup
+   ————————————————————————————————————————————— */
+.bg-light.rounded.p-3 {
+  background: #fff !important;
+}
+.bg-light.rounded.p-3 .form-control {
+  border: 1px solid #ccc;
+  border-radius: .25rem;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.bg-light.rounded.p-3 .form-control:focus {
+  outline: none;
+  border-color: var(--nimbus-primary);
+  box-shadow: 0 0 0 .2rem rgba(255,103,0,0.25);
+}
+
+/* —————————————————————————————————————————————
+   5. Latest Headlines
+   ————————————————————————————————————————————— */
+.list-unstyled li + li { margin-top: .5rem; }
+
+.list-unstyled a {
+  color: #555;
+  transition: color .2s ease;
+}
+.list-unstyled a:hover {
+  color: var(--nimbus-primary);
+  text-decoration: none;
+}
+
+/* —————————————————————————————————————————————
+   6. Buttons
+   ————————————————————————————————————————————— */
+.btn-danger {
+  background-color: var(--nimbus-primary);
+  border-color: var(--nimbus-primary);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.btn-danger:hover {
+  background-color: var(--nimbus-secondary);
+  border-color: var(--nimbus-secondary);
+}
+
+/* —————————————————————————————————————————————
+   7. Responsive Tweaks
+   ————————————————————————————————————————————— */
+@media (max-width: 768px) {
+  h1.section-title { font-size: 1.75rem; }
+  .news-card .card-img-top { height: 150px; }
+}
+
